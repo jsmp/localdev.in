@@ -16,7 +16,7 @@
                 margin-right: 0;
             }
             header h1 {
-            font-size: 3em;
+            font-size: 1.8em;
                 margin:0;
                 font-weight: normal;
                 color: #606060;
@@ -25,18 +25,25 @@
                 font-weight: bold;
                 color:#41657f;
             }
-            #content {
+            p {
                 width: 500px;
                 margin-left: auto;
                 margin-right: auto;
                 text-align: center;
             }
             .alias {
+                border:3px dotted #e4e4e4;
+                border-radius: 6px;
+                padding: 2px 4px;
+                background-color: #fafafa;
+                color: #0089e9;
+            }
+            .ip {
                 border:4px solid #e4e4e4;
                 border-radius: 6px;
                 padding: 2px 4px;
-                background-color: #f0f0f0;
-                color: #0089e9;
+                background-color: #d0d0d0;
+                color: #bb2c46;
             }
         </style>
         <script type="text/javascript" src="//use.typekit.net/fdp7xzv.js"></script>
@@ -44,12 +51,10 @@
     </head>
     <body>
 		<header class="tk-myriad-pro-condensed">
-	        <h1><span class="alias">any</span><span>.localdev</span>.in</h1>
+	        <h1><span class="alias">*</span>.<span>localdev</span>.in</h1>
 		</header>
-		<div id="content" class="tk-jaf-facitweb">
-        <p>Any subdomain of <strong>.localdev.in</strong> resolves to your localhost.
+
+        <p>Any subdomain of <strong>.localdev.in</strong> resolves to your localhost.<br/>
         Take advantage of this when doing web development to target your local virtual-hosts.</p>
-		</div>
-			
     </body>
 </html>
