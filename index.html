@@ -1,53 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>*.localdev.in | guide </title>
         <style>
-            body {
-                font-family: Helvetica, Arial, sans-serif;
-                margin: 0;
-                padding: 0;
-            }
-            header {
-                padding-top: 20px;
-                text-align: center;
-                margin-top: 0;
-                margin-left: 0;
-                margin-right: 0;
-            }
-            header h1 {
-                font-size: 1.8em;
-                margin:0;
-                font-weight: normal;
-                color: #606060;
-            }
-            header h1 span {
-                font-weight: bold;
-                color:#41657f;
-            }
-            p {
-                width: 500px;
-                margin-left: auto;
-                margin-right: auto;
-                text-align: center;
-            }
-            .alias {
-                border:3px dotted #e4e4e4;
-                border-radius: 6px;
-                padding: 2px 4px;
-                background-color: #fafafa;
-                color: #0089e9;
-            }
-            .ip {
-                border:4px solid #e4e4e4;
-                border-radius: 6px;
-                padding: 2px 4px;
-                background-color: #d0d0d0;
-                color: #bb2c46;
-            }
+            .container {margin-top: 8%; max-width: 600px;}
+            h1 strong {color:#f66}
         </style>
-        <script type="text/javascript" src="//use.typekit.net/fdp7xzv.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+        <link rel="stylesheet" type="text/css" href="http://fastly.ink.sapo.pt/3.1.1/css/ink.css"> <!-- inks css file -->
+        <script type="text/javascript" src="http://fastly.ink.sapo.pt/3.1.1/js/ink-all.js"></script> <!-- inks js bundle -->
         <script>  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -57,11 +17,41 @@
     </script>
     </head>
     <body>
-		<header class="tk-myriad-pro-condensed">
-	        <h1><span class="alias">*</span>.<span>localdev</span>.in</h1>
-		</header>
-
-        <p>Any subdomain of <strong>.localdev.in</strong> resolves to your localhost.<br/>
-        Take advantage of this when doing web development to target your local virtual-hosts.</p>
+        <div class="ink-grid">
+        <div class="container push-center">
+	        <h1><strong>*</strong>.<span>localdev</span>.in</h1>
+	        <p>A little help with your web development and local virtual-hosts.</p>
+	        <ul>
+    	           <li>Any <strong>localdev.in</strong> subdomain resolves to your localhost.</li>
+                <li>Avoids messing with the <em>hosts</em> files.</li>
+        	    </ul>
+            <h3>DNS Records</h3>
+            <table class="ink-table alternating bordered">
+                <thead>
+                <tr>
+                    <th class="align-left">Record</th>
+                    <th class="align-left">Type</th>
+                    <th class="align-left">Value</th>
+                </tr>
+                <tbody>
+                <tr>
+                    <td>localdev.in</td>
+                    <td>CNAME</td>
+                    <td>jsmp.github.io</td>
+                </tr>
+                <tr>
+                    <td>*.localdev.in</td>
+                    <td>A</td>
+                    <td>127.0.0.1</td>
+                </tr>
+                <tr>
+                    <td>*.localdev.in</td>
+                    <td>AAAA</td>
+                    <td>::1</td>
+                </tr>
+                </tbody>
+                </thead>
+            </table>
+    </div>
     </body>
 </html>
